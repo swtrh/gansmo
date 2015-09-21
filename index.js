@@ -2,8 +2,12 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
+    
     res.send('Hello World');
-});
 
-app.listen(3000)
+});
+var port = (process.env.PORT || '3000');
+app.listen(port);
+
+console.log('Starting Hello World ' + port);
