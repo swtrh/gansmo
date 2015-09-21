@@ -4,6 +4,6 @@ block content
   h1= title
   p Store File #{title}
   
-  form(action='http://localhost:3000/store/message',method='post')
+  form(action='#{message_url}',method='post')
     input(type="text",name="message", placeholder="Enter a message:",size="40")
     input(type="submit", name='submit', value='Submit')
