@@ -5,6 +5,10 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     res.render('Store', { title: 'Store' });
 });
-
-
+
+router.route('/message')
+	.post(function (req,res, next) {
+	console.log('Receiving message ' + req.body.message);
+	res.send('Message was ' + req.body.message);
+	});
 module.exports = router;
