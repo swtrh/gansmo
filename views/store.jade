@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Store File #{title}
+  h1= "Store"
+  p Welcome to the store
   
-  form(action='#{message_url}',method='post')
-    input(type="text",name="message", placeholder="Enter a message:",size="40")
-    input(type="submit", name='submit', value='Submit')
+  form(action='#{messageURL}', method='post')
+    input(type="text",name="message",placeholder="Enter a message",size="40")
+    input(type='submit',name='submit',value='Submit')
+    
